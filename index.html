@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <title>Frontend Mentor | Interactive comments section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="bg-[hsl(223,19%,93%)]">
+    <!-- Pull dynamic content from the data.json file -->
+
+    <main class="w-1/2 mx-auto grid place-items-center py-8">
+      <div class="max-w-[700px]">
+        <div
+          class="card | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6"
+        >
+          <div
+            class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
+          >
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
+            />
+            <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">12</p>
+            <img
+              src="./images/icon-minus.svg"
+              alt=""
+              class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
+            />
+          </div>
+          <div class="card-content | grid grid-flow-row gap-2">
+            <div class="card-header | flex items-center justify-start gap-3">
+              <img
+                src="./images/avatars/image-amyrobson.png"
+                alt=""
+                class="rounded-full w-10 h-10"
+              />
+              <p class="text-[hsl(212,_24%,_26%)] font-bold">amyrobson</p>
+              <p class="text-[hsl(211,_10%,_45%)]">1 month ago</p>
+              <div
+                class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+              >
+                <img src="./images/icon-reply.svg" alt="" />
+                <p>Reply</p>
+              </div>
+            </div>
+            <div class="card-body | text-[hsl(211,_10%,_45%)] leading-6">
+              Impressive! Though it seems the drag feature could be improved.
+              But overall it looks incredible. You've nailed the design and the
+              responsiveness at various breakpoints works really well.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[700px] mt-4">
+        <div
+          class="card | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6"
+        >
+          <div
+            class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
+          >
+            <img
+              src="./images/icon-plus.svg"
+              alt=""
+              class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
+            />
+            <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">5</p>
+            <img
+              src="./images/icon-minus.svg"
+              alt=""
+              class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
+            />
+          </div>
+          <div class="card-content | grid grid-flow-row gap-2">
+            <div class="card-header | flex items-center justify-start gap-3">
+              <img
+                src="./images/avatars/image-maxblagun.png"
+                alt=""
+                class="rounded-full w-10 h-10"
+              />
+              <p class="text-[hsl(212,_24%,_26%)] font-bold">maxblagun</p>
+              <p class="text-[hsl(211,_10%,_45%)]">2 weeks ago</p>
+              <div
+                class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+              >
+                <img src="./images/icon-reply.svg" alt="" />
+                <p>Reply</p>
+              </div>
+            </div>
+            <div class="card-body | text-[hsl(211,_10%,_45%)] leading-6">
+              Woah, your project looks awesome! How long have you been coding
+              for? I'm still new, but think I want to dive into React as well
+              soon. Perhaps you can give me an insight on where I can learn
+              React? Thanks!
+            </div>
+          </div>
+        </div>
+        <div class="subcard grid grid-cols-[5.25rem_auto] justify-items-center">
+          <div
+            class="subcard-left | w-1 bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl mt-4"
+          ></div>
+          <div
+            class="subcard-right | rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6 ml-auto mt-4"
+          >
+            <div
+              class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
+            >
+              <img
+                src="./images/icon-plus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
+              />
+              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">4</p>
+              <img
+                src="./images/icon-minus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
+              />
+            </div>
+            <div class="card-content | grid grid-flow-row gap-2">
+              <div class="card-header | flex items-center justify-start gap-3">
+                <img
+                  src="./images/avatars/image-ramsesmiron.png"
+                  alt=""
+                  class="rounded-full w-10 h-10"
+                />
+                <p class="text-[hsl(212,_24%,_26%)] font-bold">ramsesmiron</p>
+                <p class="text-[hsl(211,_10%,_45%)]">1 week ago</p>
+                <div
+                  class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+                >
+                  <img src="./images/icon-reply.svg" alt="" />
+                  <p>Reply</p>
+                </div>
+              </div>
+              <div class="card-body | text-[hsl(211,_10%,_45%)] leading-6">
+                <span class="font-bold text-[hsl(238,_40%,_52%)]"
+                  >@maxblagun</span
+                >
+                <span>
+                  If you're still new, I'd recommend focusing on the
+                  fundamentals of HTML, CSS, and JS before considering React.
+                  It's very tempting to jump ahead but lay a solid foundation
+                  first.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subcard grid grid-cols-[5.25rem_auto] justify-items-center">
+          <div
+            class="subcard-left | w-1 bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl"
+          ></div>
+          <div
+            class="subcard-right | rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6 ml-auto mt-4"
+          >
+            <div
+              class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
+            >
+              <img
+                src="./images/icon-plus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
+              />
+              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">2</p>
+              <img
+                src="./images/icon-minus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
+              />
+            </div>
+            <div class="card-content | grid grid-flow-row gap-2">
+              <div class="card-header | flex items-center justify-start gap-3">
+                <img
+                  src="./images/avatars/image-juliusomo.png"
+                  alt=""
+                  class="rounded-full w-10 h-10"
+                />
+                <p class="text-[hsl(212,_24%,_26%)] font-bold">juliusomo</p>
+                <div
+                  class="you | inline-block px-2 rounded-sm text-sm text-white bg-[hsl(238,_40%,_52%)]"
+                >
+                  you
+                </div>
+                <p class="text-[hsl(211,_10%,_45%)]">2 days ago</p>
+                <div class="modify | ml-auto flex items-center gap-6 font-bold">
+                  <div
+                    class="text-[hsl(358,_79%,_66%)] flex items-center gap-2"
+                  >
+                    <img src="./images/icon-delete.svg" alt="" />
+                    <p>Delete</p>
+                  </div>
+                  <div
+                    class="text-[hsl(238,_40%,_52%)] flex items-center gap-2"
+                  >
+                    <img src="./images/icon-edit.svg" alt="" />
+                    <p>Edit</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body | text-[hsl(211,_10%,_45%)] leading-6">
+                <span class="font-bold text-[hsl(238,_40%,_52%)]"
+                  >@ramsesmiron</span
+                >
+                <span>
+                  I couldn't agree more with this. Everything moves so fast and
+                  it always seems like everyone knows the newest
+                  library/framework. But the fundamentals are what stay
+                  constant.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[700px] mt-4">
+        <div
+          class="commentcard | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr_auto] gap-6"
+        >
+          <img
+            src="./images/avatars/image-juliusomo.png"
+            alt=""
+            class="rounded-full w-10 h-10"
+          />
+          <textarea
+            placeholder="Add a comment..."
+            rows="3"
+            class="w-full resize-none border border-[hsl(223,_19%,_93%)] rounded-xl py-4 px-6"
+          ></textarea>
+          <button
+            class="uppercase text-lg text-white bg-[hsl(238,_40%,_52%)] self-start py-3 px-8 rounded-lg"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
