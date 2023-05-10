@@ -27,27 +27,58 @@
     </style>
   </head>
   <body class="bg-[hsl(223,19%,93%)]">
-    <!-- Pull dynamic content from the data.json file -->
+    <div
+      class="fixed inset-0 bg-black bg-opacity-50 grid place-items-center -left-full w-full"
+    >
+      <div class="modal | bg-white lg:px-8 lg:py-10 px-4 py-6 rounded-xl">
+        <h2 class="text-2xl font-bold text-[hsl(212,_24%,_26%)]">
+          Delete Comment
+        </h2>
+        <p class="max-w-[32ch] my-5 leading-6">
+          Are you sure you want to delete this comment? This will remove the
+          comment and can't be undone.
+        </p>
+        <div class="flex gap-4">
+          <button
+            class="uppercase text-lg text-white px-8 py-3 bg-[hsl(211,_10%,_45%)] rounded-xl"
+          >
+            <p>No, Cancel</p></button
+          ><button
+            class="uppercase text-lg text-white px-8 py-3 bg-[hsl(358,_79%,_66%)] rounded-xl"
+          >
+            <p>Yes, Delete</p>
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <main class="w-1/2 mx-auto grid place-items-center py-8">
+    <main class="w-4/5 2xl:w-1/2 xl:w-3/4 mx-auto grid place-items-center py-8">
       <div class="max-w-[700px]">
         <div
-          class="card | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6"
+          class="card | w-full rounded-md px-4 py-6 lg:px-6 lg:py-8 bg-white grid grid-rows-[auto_1fr] lg:grid-cols-[auto_1fr] lg:grid-rows-none gap-6"
         >
-          <div
-            class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
-          >
-            <img
-              src="./images/icon-plus.svg"
-              alt=""
-              class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
-            />
-            <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">12</p>
-            <img
-              src="./images/icon-minus.svg"
-              alt=""
-              class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
-            />
+          <div class="flex justify-between order-2 lg:order-first">
+            <div
+              class="counter | grid lg:gap-1 gap-3 grid-cols-3 lg:grid-cols-none lg:grid-rows-3 self-auto lg:self-start items-center justify-items-center px-4 py-2 lg:py-3 lg:px-0 lg:w-10 w-[6.5rem] rounded-xl bg-[hsl(228,_33%,_97%)]"
+            >
+              <img
+                src="./images/icon-plus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-auto lg:self-start cursor-pointer"
+              />
+              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">12</p>
+              <img
+                src="./images/icon-minus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-auto lg:self-end cursor-pointer"
+              />
+            </div>
+            <div
+              class="reply | flex lg:hidden items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+            >
+              <img src="./images/icon-reply.svg" alt="" />
+              <p>Reply</p>
+            </div>
           </div>
           <div class="card-content | grid grid-flow-row gap-2">
             <div class="card-header | flex items-center justify-start gap-3">
@@ -59,7 +90,7 @@
               <p class="text-[hsl(212,_24%,_26%)] font-bold">amyrobson</p>
               <p class="text-[hsl(211,_10%,_45%)]">1 month ago</p>
               <div
-                class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+                class="reply | hidden lg:flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
               >
                 <img src="./images/icon-reply.svg" alt="" />
                 <p>Reply</p>
@@ -75,22 +106,30 @@
       </div>
       <div class="max-w-[700px] mt-4">
         <div
-          class="card | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6"
+          class="card | w-full rounded-md px-4 py-6 lg:px-6 lg:py-8 bg-white grid grid-rows-[auto_1fr] lg:grid-cols-[auto_1fr] lg:grid-rows-none gap-6"
         >
-          <div
-            class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
-          >
-            <img
-              src="./images/icon-plus.svg"
-              alt=""
-              class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
-            />
-            <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">5</p>
-            <img
-              src="./images/icon-minus.svg"
-              alt=""
-              class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
-            />
+          <div class="flex justify-between order-2 lg:order-first">
+            <div
+              class="counter | grid lg:gap-1 gap-3 grid-cols-3 lg:grid-cols-none lg:grid-rows-3 self-auto lg:self-start items-center justify-items-center px-4 py-2 lg:py-3 lg:px-0 lg:w-10 w-[6.5rem] rounded-xl bg-[hsl(228,_33%,_97%)]"
+            >
+              <img
+                src="./images/icon-plus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-auto lg:self-start cursor-pointer"
+              />
+              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">5</p>
+              <img
+                src="./images/icon-minus.svg"
+                alt=""
+                class="text-[hsl(211,_10%,_45%)] self-auto lg:self-end cursor-pointer"
+              />
+            </div>
+            <div
+              class="reply | flex lg:hidden items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+            >
+              <img src="./images/icon-reply.svg" alt="" />
+              <p>Reply</p>
+            </div>
           </div>
           <div class="card-content | grid grid-flow-row gap-2">
             <div class="card-header | flex items-center justify-start gap-3">
@@ -102,7 +141,7 @@
               <p class="text-[hsl(212,_24%,_26%)] font-bold">maxblagun</p>
               <p class="text-[hsl(211,_10%,_45%)]">2 weeks ago</p>
               <div
-                class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+                class="reply | hidden lg:flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
               >
                 <img src="./images/icon-reply.svg" alt="" />
                 <p>Reply</p>
@@ -116,27 +155,37 @@
             </div>
           </div>
         </div>
-        <div class="subcard grid grid-cols-[5.25rem_auto] justify-items-center">
+        <div
+          class="subcard grid grid-cols-[1rem_auto] lg:grid-cols-[5.25rem_auto] lg:justify-items-center"
+        >
           <div
-            class="subcard-left | w-1 bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl mt-4"
+            class="subcard-left | w-[2px] bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl mt-4"
           ></div>
           <div
-            class="subcard-right | rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6 ml-auto mt-4"
+            class="subcard-right | rounded-md px-4 py-6 lg:px-6 lg:py-8 bg-white grid grid-rows-[auto_1fr] lg:grid-cols-[auto_1fr] lg:grid-rows-none gap-6 ml-auto mt-4"
           >
-            <div
-              class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
-            >
-              <img
-                src="./images/icon-plus.svg"
-                alt=""
-                class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
-              />
-              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">4</p>
-              <img
-                src="./images/icon-minus.svg"
-                alt=""
-                class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
-              />
+            <div class="flex justify-between order-2 lg:order-first">
+              <div
+                class="counter | grid lg:gap-1 gap-3 grid-cols-3 lg:grid-cols-none lg:grid-rows-3 self-auto lg:self-start items-center justify-items-center px-4 py-2 lg:py-3 lg:px-0 lg:w-10 w-[6.5rem] rounded-xl bg-[hsl(228,_33%,_97%)]"
+              >
+                <img
+                  src="./images/icon-plus.svg"
+                  alt=""
+                  class="text-[hsl(211,_10%,_45%)] self-auto lg:self-start cursor-pointer"
+                />
+                <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">4</p>
+                <img
+                  src="./images/icon-minus.svg"
+                  alt=""
+                  class="text-[hsl(211,_10%,_45%)] self-auto lg:self-end cursor-pointer"
+                />
+              </div>
+              <div
+                class="reply | flex lg:hidden items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+              >
+                <img src="./images/icon-reply.svg" alt="" />
+                <p>Reply</p>
+              </div>
             </div>
             <div class="card-content | grid grid-flow-row gap-2">
               <div class="card-header | flex items-center justify-start gap-3">
@@ -148,7 +197,7 @@
                 <p class="text-[hsl(212,_24%,_26%)] font-bold">ramsesmiron</p>
                 <p class="text-[hsl(211,_10%,_45%)]">1 week ago</p>
                 <div
-                  class="reply | flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
+                  class="reply | hidden lg:flex items-center gap-2 text-[hsl(238,_40%,_52%)] ml-auto font-bold"
                 >
                   <img src="./images/icon-reply.svg" alt="" />
                   <p>Reply</p>
@@ -168,27 +217,43 @@
             </div>
           </div>
         </div>
-        <div class="subcard grid grid-cols-[5.25rem_auto] justify-items-center">
+        <div
+          class="subcard grid grid-cols-[1rem_auto] lg:grid-cols-[5.25rem_auto] lg:justify-items-center"
+        >
           <div
-            class="subcard-left | w-1 bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl"
+            class="subcard-left | w-[2px] bg-[hsla(211,_10%,_45%,_0.1)] rounded-xl"
           ></div>
           <div
-            class="subcard-right | rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr] gap-6 ml-auto mt-4"
+            class="subcard-right | rounded-md px-4 py-6 lg:px-6 lg:py-8 bg-white grid grid-rows-[auto_1fr] lg:grid-cols-[auto_1fr] lg:grid-rows-none gap-6 ml-auto mt-4"
           >
-            <div
-              class="counter | grid gap-1 grid-rows-3 self-start items-center justify-items-center py-3 w-10 rounded-xl bg-[hsl(228,_33%,_97%)]"
-            >
-              <img
-                src="./images/icon-plus.svg"
-                alt=""
-                class="text-[hsl(211,_10%,_45%)] self-start cursor-pointer"
-              />
-              <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">2</p>
-              <img
-                src="./images/icon-minus.svg"
-                alt=""
-                class="text-[hsl(211,_10%,_45%)] self-end cursor-pointer"
-              />
+            <div class="flex justify-between order-2 lg:order-first">
+              <div
+                class="counter | grid lg:gap-1 gap-3 grid-cols-3 lg:grid-cols-none lg:grid-rows-3 self-start items-center justify-items-center px-4 py-2 lg:py-3 lg:px-0 lg:w-10 w-[6.5rem] rounded-xl bg-[hsl(228,_33%,_97%)]"
+              >
+                <img
+                  src="./images/icon-plus.svg"
+                  alt=""
+                  class="text-[hsl(211,_10%,_45%)] self-auto lg:self-start cursor-pointer"
+                />
+                <p class="likes | text-[hsl(212,_24%,_26%)] font-bold">2</p>
+                <img
+                  src="./images/icon-minus.svg"
+                  alt=""
+                  class="text-[hsl(211,_10%,_45%)] self-auto lg:self-end cursor-pointer"
+                />
+              </div>
+              <div
+                class="modify | ml-auto flex lg:hidden items-center gap-3 font-bold"
+              >
+                <div class="text-[hsl(358,_79%,_66%)] flex items-center gap-2">
+                  <img src="./images/icon-delete.svg" alt="" />
+                  <p>Delete</p>
+                </div>
+                <div class="text-[hsl(238,_40%,_52%)] flex items-center gap-2">
+                  <img src="./images/icon-edit.svg" alt="" />
+                  <p>Edit</p>
+                </div>
+              </div>
             </div>
             <div class="card-content | grid grid-flow-row gap-2">
               <div class="card-header | flex items-center justify-start gap-3">
@@ -204,15 +269,17 @@
                   you
                 </div>
                 <p class="text-[hsl(211,_10%,_45%)]">2 days ago</p>
-                <div class="modify | ml-auto flex items-center gap-6 font-bold">
+                <div
+                  class="modify | ml-auto hidden lg:flex items-center gap-6 font-bold"
+                >
                   <div
-                    class="text-[hsl(358,_79%,_66%)] flex items-center gap-2"
+                    class="DELETE | text-[hsl(358,_79%,_66%)] flex items-center gap-2"
                   >
                     <img src="./images/icon-delete.svg" alt="" />
                     <p>Delete</p>
                   </div>
                   <div
-                    class="text-[hsl(238,_40%,_52%)] flex items-center gap-2"
+                    class="EDIT | text-[hsl(238,_40%,_52%)] flex items-center gap-2"
                   >
                     <img src="./images/icon-edit.svg" alt="" />
                     <p>Edit</p>
@@ -234,9 +301,9 @@
           </div>
         </div>
       </div>
-      <div class="w-[700px] mt-4">
+      <div class="w-full max-w-[700px] mt-4">
         <div
-          class="commentcard | w-full rounded-md px-6 py-8 bg-white grid grid-cols-[auto_1fr_auto] gap-6"
+          class="commentcard | w-full rounded-md px-4 py-6 lg:px-6 lg:py-8 bg-white grid grid-cols-2 lg:grid-cols-[auto_1fr_auto] lg:grid-rows-none gap-6"
         >
           <img
             src="./images/avatars/image-juliusomo.png"
@@ -246,15 +313,17 @@
           <textarea
             placeholder="Add a comment..."
             rows="3"
-            class="w-full resize-none border border-[hsl(223,_19%,_93%)] rounded-xl py-4 px-6"
+            cols="20"
+            class="w-full order-first lg:order-1 box-border resize-none border border-[hsl(223,_19%,_93%)] rounded-xl py-4 px-6 col-span-2 lg:col-span-1"
           ></textarea>
           <button
-            class="uppercase text-lg text-white bg-[hsl(238,_40%,_52%)] self-start py-3 px-8 rounded-lg"
+            class="uppercase text-lg text-white order-2 bg-[hsl(238,_40%,_52%)] self-start py-3 px-8 rounded-lg"
           >
             Send
           </button>
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
